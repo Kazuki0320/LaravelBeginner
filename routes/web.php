@@ -16,4 +16,4 @@ use App\Http\Controllers\HelloController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('hello/{id?}/{pass?}', [HelloController::class, 'Hello']);
+Route::get('hello', [HelloController::class, '__invoke']);

@@ -6,27 +6,23 @@ use Illuminate\Http\Request;
 
 class HelloController extends Controller
 {
-    public function Hello($id='noname', $pass='unknow')
-    {
-    return <<< EOF
+	public function __invoke() {
+		return <<< EOF
 	<html>
 		<head>
 		<title>Hello</title>
 		<style>
-			body {font-size:16pt; color:#9999; }
-			h1 {font-size:100pt; text-aligin:right, Bolor:#eee;
-			margin:-40px 0px -50px 0px; }
+		body {font-size:16pt; color:#999;}
+		h1 {font-size:30pt; text-align:right; color:#eee;
+		margin:-15pt; 0pt 0pt 0pt; }
+		}
 		</style>
 		</head>
-	<body>
-		<h1>Hello</h1>
-		<p>これは、Helloコントローラのindexです</p>
-		<ul>
-			<li>ID: {$id}</li>
-			<li>PASS: {$pass}</li>
-		</ul>
-	</body>
+		<body>
+		<h1>single Action</h1>
+		<p>これは、シングルアクションコントローラー</p>
+		</body>
 	</html>
 	EOF;
-    }
+	}
 }
