@@ -18,6 +18,5 @@ class TestController extends Controller
 	public function test(Test $test)//ここでインスタンス化できる
 	{
 		$user = $test->getTestUser(); //関数を呼ぶ
-		dd($user);
 	}
 }
