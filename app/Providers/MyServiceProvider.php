@@ -13,8 +13,7 @@ class MyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-	    app()->singleton('App\Services\Test.php');
-	    echo "<b><MyServiceProvider/register></b><br>";
+        app()->singleton('myService', 'App\Services\Test');
     }
 
     /**
@@ -24,6 +23,6 @@ class MyServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        echo "<b><MyServiceProvider/boot></b>";
+
     }
 }

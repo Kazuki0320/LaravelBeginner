@@ -6,7 +6,7 @@ class MyService extends Facade
 {
 	protected static function getFacadeAccessor()
 	{
-		return 'myservice';
+		return 'myService';
 	}
 }
 ?>
