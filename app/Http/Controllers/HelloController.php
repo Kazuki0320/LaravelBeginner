@@ -41,7 +41,6 @@ class HelloController extends Controller
 
 	public function post(Request $request)
 	{
-        dd($request->msg);
 		$msg = $request->msg;
 
 		$data = [
