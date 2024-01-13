@@ -1,4 +1,4 @@
- <html>
+<html>
 <head>
 	<title>Hello/Index</title>
 	<style>
@@ -10,5 +10,10 @@
 <body>
 	<h1>Blade/Index</h1>
 	<p>{{ $msg }}</p>
+	<form method="POST" action="/hello">
+		@csrf
+		<input type="text" name="msg">
+		<input type="submit">
+	</form>
 </body>
 </html>

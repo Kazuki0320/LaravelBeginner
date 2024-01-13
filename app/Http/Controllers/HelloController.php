@@ -25,9 +25,28 @@ class HelloController extends Controller
 	</html>
 	EOF;
 	}
-    public function index()
-    {
+	public function index()
+	{
         $data = ['msg' => 'これはコントローラーから渡されたメッセージです。'];
         return view('hello.index' , $data);
-    }
+	}
+
+	public function form()
+	{
+		$data = [
+			'msg' => 'お名前を入力してください。',
+		];
+		return view('hello.index', $data);
+	}
+
+	public function post(Request $request)
+	{
+        dd($request->msg);
+		$msg = $request->msg;
+
+		$data = [
+			'msg' => 'こんにちは、' . $msg . 'さん',
+		];
+		return view('hello.index', $data);
+	}
 }
