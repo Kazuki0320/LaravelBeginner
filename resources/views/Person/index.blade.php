@@ -3,7 +3,7 @@
 @section('title', 'Person.index')
 
 @section('menubar')
-    @parent
+@parent
     インデックスページ
 @endsection
 
