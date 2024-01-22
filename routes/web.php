@@ -21,4 +21,4 @@ Route::get('/', function () {
 Route::get('hello', [HelloController::class, 'form']);
 Route::post('hello', [HelloController::class, 'post']);
 Route::get('test', [TestController::class, 'test']);
-Route::get('person', [PersonController::class, 'index']);
+Route::get('person', [PersonController::class, 'index'])->name('person.index');
