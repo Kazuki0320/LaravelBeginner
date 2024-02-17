@@ -13,4 +13,3 @@ class PersonController extends Controller
 		return view('Person.index', ['items' => $items]);
 	}
 }
-?>
