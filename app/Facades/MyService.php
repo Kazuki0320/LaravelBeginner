@@ -9,4 +9,3 @@ class MyService extends Facade
 		return 'myService';
 	}
 }
-?>

@@ -3,9 +3,8 @@ namespace App\Services;
 
 class Test
 {
-	public function getTestUser()
+	public function getTest()
 	{
 		dd('Test');
 	}
 }
-?>
