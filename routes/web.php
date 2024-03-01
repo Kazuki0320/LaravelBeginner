@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GolfController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\TestController;
@@ -22,3 +23,5 @@ Route::get('hello', [HelloController::class, 'form']);
 Route::post('hello', [HelloController::class, 'post']);
 Route::get('test', [TestController::class, 'test']);
 Route::get('person', [PersonController::class, 'index'])->name('person.index');
+Route::get('golf', [GolfController::class, 'playGolf']);
+
