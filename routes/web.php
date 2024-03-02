@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\GolfController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GolfController;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\PersonController;
+use App\Http\Controllers\MessageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,4 +25,7 @@ Route::post('hello', [HelloController::class, 'post']);
 Route::get('test', [TestController::class, 'test']);
 Route::get('person', [PersonController::class, 'index'])->name('person.index');
 Route::get('golf', [GolfController::class, 'playGolf']);
-
+Route::controller(MessageController::class)->group(function () {
+    Route::get('message', [MessageController::class, 'index']);
+    Route::post('api/message/store', [MessageController::class, 'store']);
+});
