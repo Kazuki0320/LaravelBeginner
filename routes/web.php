@@ -24,7 +24,8 @@ Route::get('hello', [HelloController::class, 'form']);
 Route::post('hello', [HelloController::class, 'post']);
 Route::get('test', [TestController::class, 'test']);
 Route::get('person', [PersonController::class, 'index'])->name('person.index');
-Route::get('golf', [GolfController::class, 'playGolf']);
+Route::get('golf', [GolfController::class, 'playGolf'])
+    ->middleware(App\Http\Middleware\MyMiddleware::class);
 Route::controller(MessageController::class)->group(function () {
     Route::get('message', [MessageController::class, 'index']);
     Route::post('api/message/store', [MessageController::class, 'store']);
